@@ -49,7 +49,7 @@
             listBox1.Font = new Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "\t", "", "\t\tTiramisù", "\t\tBrioche", "\t\tFrittella", "\t\tCheesecake", "\t\tPlumcake", "\t\tCrostata", "\t\tBiscotti", "\t\tPandoro", "\t\tCiccioCake" });
+            listBox1.Items.AddRange(new object[] { "\t", "", "\t\tTiramisù", "\t\tBrioche", "\t\tFrittella", "\t\tCheesecake", "\t\tPlumcake", "\t\tCrostata", "\t\tBiscotti", "\t\tPandoro", "\t\tGelato", "\t\tCiccioCake" });
             listBox1.Location = new Point(266, 146);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(283, 197);

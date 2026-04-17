@@ -16,5 +16,10 @@ namespace Progetto_C_
         {
             InitializeComponent();
         }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

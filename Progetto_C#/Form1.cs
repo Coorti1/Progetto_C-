@@ -11,73 +11,29 @@ namespace Progetto_C_
         {
             if (listBox1.SelectedItem == null) return;
 
-            string voceSelezionata = listBox1.SelectedItem.ToString();
-            if (voceSelezionata == "Tiramisù")
+            string voceSelezionata = listBox1.SelectedItem.ToString().Trim();
+            MessageBox.Show("Hai selezionato: " + voceSelezionata);
+
+            Form f = null;
+
+            switch (voceSelezionata)
             {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form2 nuovaFinestra = new Form2();
-                nuovaFinestra.Show();
+                case "Tiramisù": f = new Form2(); break;
+                case "Brioche": f = new Form3(); break;
+                case "Frittella": f = new Form4(); break;
+                case "Cheesecake": f = new Form5(); break;
+                case "Plumcake": f = new Form6(); break;
+                case "Crostata": f = new Form7(); break;
+                case "Biscotti": f = new Form8(); break;
+                case "Pandoro": f = new Form9(); break;
+                case "Gelato": f = new Form10(); break;
+                case "CiccioCake": f = new Form11(); break;
+                default:
+                    MessageBox.Show("Dolce non riconosciuto!");
+                    break;
             }
 
-            else if (voceSelezionata == "Brioche")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form3 nuovaFinestra = new Form3();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Frittella")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form4 nuovaFinestra = new Form4();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Cheesecake")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form5 nuovaFinestra = new Form5();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Plumcake")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form6 nuovaFinestra = new Form6();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Crostata")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form7 nuovaFinestra = new Form7();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Biscotti")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form8 nuovaFinestra = new Form8();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Pandoro")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form9 nuovaFinestra = new Form9();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "Gelato")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form10 nuovaFinestra = new Form10();
-                nuovaFinestra.Show();
-            }
-            else if (voceSelezionata == "CiccioCake")
-            {
-                MessageBox.Show("Hai selezionato: " + voceSelezionata);
-                Form11 nuovaFinestra = new Form11();
-                nuovaFinestra.Show();
-            }
-
-
-
-
-
+            f?.Show();
         }
 
 

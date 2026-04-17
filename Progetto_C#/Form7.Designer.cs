@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form7";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            lblProcedimento = new Label();
+            lblIngredienti = new Label();
+            lblNome = new Label();
+            SuspendLayout();
+            // 
+            // lblProcedimento
+            // 
+            lblProcedimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProcedimento.Location = new Point(277, 172);
+            lblProcedimento.Name = "lblProcedimento";
+            lblProcedimento.RightToLeft = RightToLeft.No;
+            lblProcedimento.Size = new Size(1179, 251);
+            lblProcedimento.TabIndex = 10;
+            lblProcedimento.Text = resources.GetString("lblProcedimento.Text");
+            // 
+            // lblIngredienti
+            // 
+            lblIngredienti.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIngredienti.Location = new Point(16, 172);
+            lblIngredienti.Name = "lblIngredienti";
+            lblIngredienti.RightToLeft = RightToLeft.No;
+            lblIngredienti.Size = new Size(229, 208);
+            lblIngredienti.TabIndex = 9;
+            lblIngredienti.Text = "INGREDIENTI (7-8 persone):\r\n\r\n\r\n- Mascarpone (500g)\r\n- Savoiardi (300-400g)\r\n- 4-5 Uova\r\n- Zucchero (120g)\r\n- Caffè (300-400ml)\r\n- Cacao in polvere\r\n";
+            // 
+            // lblNome
+            // 
+            lblNome.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNome.Location = new Point(16, 28);
+            lblNome.Name = "lblNome";
+            lblNome.RightToLeft = RightToLeft.No;
+            lblNome.Size = new Size(597, 124);
+            lblNome.TabIndex = 8;
+            lblNome.Text = "RICETTA CROSTATA";
+            // 
+            // Form7
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1472, 450);
+            Controls.Add(lblProcedimento);
+            Controls.Add(lblIngredienti);
+            Controls.Add(lblNome);
+            Name = "Form7";
+            Text = "Form7";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Label lblProcedimento;
+        private Label lblIngredienti;
+        private Label lblNome;
     }
 }

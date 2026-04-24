@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Progetto_C_
 {
-    public partial class Form11 : Form
+    public partial class FormDispensa : Form
     {
-        public Form11()
+        public FormDispensa()
         {
             InitializeComponent();
         }
 
-        private void lblIngredienti_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

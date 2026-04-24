@@ -1,6 +1,6 @@
 ﻿namespace Progetto_C_
 {
-    partial class FormLista
+    partial class FormDispensa
     {
         /// <summary>
         /// Required designer variable.
@@ -35,20 +35,20 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(411, 200);
+            listBox1.Location = new Point(389, 111);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(120, 94);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // FormLista
+            // FormDispensa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(listBox1);
-            Name = "FormLista";
-            Text = "Form2";
+            Name = "FormDispensa";
+            Text = "FormDispensa";
             ResumeLayout(false);
         }
 

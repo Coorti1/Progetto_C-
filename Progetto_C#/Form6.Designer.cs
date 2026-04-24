@@ -52,7 +52,8 @@
             lblIngredienti.RightToLeft = RightToLeft.No;
             lblIngredienti.Size = new Size(229, 208);
             lblIngredienti.TabIndex = 9;
-            lblIngredienti.Text = "INGREDIENTI (7-8 persone):\r\n\r\n\r\n- Mascarpone (500g)\r\n- Savoiardi (300-400g)\r\n- 4-5 Uova\r\n- Zucchero (120g)\r\n- Caffè (300-400ml)\r\n- Cacao in polvere\r\n";
+            lblIngredienti.Text = resources.GetString("lblIngredienti.Text");
+            lblIngredienti.Click += lblIngredienti_Click;
             // 
             // lblNome
             // 

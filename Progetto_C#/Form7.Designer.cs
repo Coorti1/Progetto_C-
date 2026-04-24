@@ -40,7 +40,7 @@
             lblProcedimento.Location = new Point(277, 172);
             lblProcedimento.Name = "lblProcedimento";
             lblProcedimento.RightToLeft = RightToLeft.No;
-            lblProcedimento.Size = new Size(1179, 251);
+            lblProcedimento.Size = new Size(1179, 322);
             lblProcedimento.TabIndex = 10;
             lblProcedimento.Text = resources.GetString("lblProcedimento.Text");
             // 
@@ -50,9 +50,10 @@
             lblIngredienti.Location = new Point(16, 172);
             lblIngredienti.Name = "lblIngredienti";
             lblIngredienti.RightToLeft = RightToLeft.No;
-            lblIngredienti.Size = new Size(229, 208);
+            lblIngredienti.Size = new Size(267, 232);
             lblIngredienti.TabIndex = 9;
-            lblIngredienti.Text = "INGREDIENTI (7-8 persone):\r\n\r\n\r\n- Mascarpone (500g)\r\n- Savoiardi (300-400g)\r\n- 4-5 Uova\r\n- Zucchero (120g)\r\n- Caffè (300-400ml)\r\n- Cacao in polvere\r\n";
+            lblIngredienti.Text = "INGREDIENTI (7-8 persone):\r\n\r\n\r\nFarina 00: 300 g\r\nBurro freddo: 150 g\r\nZucchero: 100 g\r\nUova: 1 intero e 1 tuorlo\r\nMarmellata o confettura: 300-350 g\r\nScorza di limone grattugiata\r\nSale: un pizzico ";
+            lblIngredienti.Click += lblIngredienti_Click;
             // 
             // lblNome
             // 
@@ -68,7 +69,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1472, 450);
+            ClientSize = new Size(1472, 513);
             Controls.Add(lblProcedimento);
             Controls.Add(lblIngredienti);
             Controls.Add(lblNome);

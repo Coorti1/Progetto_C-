@@ -51,5 +51,36 @@ namespace Progetto_C_
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormDispensa fd = new FormDispensa();
+
+            fd.listBox1.Items.Add("Farina 00");
+            fd.listBox1.Items.Add("Farina Manitoba");
+            fd.listBox1.Items.Add("Zucchero semolato");
+            fd.listBox1.Items.Add("Zucchero a velo");
+            fd.listBox1.Items.Add("Burro");
+            fd.listBox1.Items.Add("Uova");
+            fd.listBox1.Items.Add("Panna fresca da montare");
+            fd.listBox1.Items.Add("Latte intero");
+            fd.listBox1.Items.Add("Latte condensato");
+            fd.listBox1.Items.Add("Yogurt");
+            fd.listBox1.Items.Add("Formaggio spalmabile");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Mascarpone");
+            fd.listBox1.Items.Add("Biscotti secchi");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Ricotta");
+
+
+            fd.Show();
+        }
     }
 }

@@ -120,13 +120,40 @@
   <data name="lblProcedimento.Text" xml:space="preserve">
     <value>PROCEDIMENTO:
 
-Prima di tutto, fai una moka da 4-6 persone e schiaffala in una ciotola a raffreddare. 
-Se ti piace carico, non zuccherarlo.
-Prendi 5 uova: separa i tuorli dagli albumi. Sbatte i tuorli con 5 cucchiai di zucchero finché non diventano una crema chiara. 
-Aggiungi 500g di mascarpone e mescola bene finché spariscono i grumi. 
-A parte, monta gli albumi a neve ferma (devono restare attaccati alla ciotola se la giri) e incorporali alla crema di mascarpone muovendo la spatola dal basso verso l'alto.
-Ora monta il dolce: prendi i savoiardi, passali nel caffè un secondo per lato (non annegarli o diventano pappa) e fai un primo strato in una teglia. 
-Copri con metà della crema. Fai un altro strato di biscotti bagnati e chiudi con la crema rimasta.
-Metti tutto in frigo per almeno 4 ore, meglio se lo prepari il giorno prima così si compatta bene. Prima di mangiarlo, spolvera con un bel po' di cacao amaro.</value>
+La preparazione inizia con il lievitino: si sciolgono lievito e zucchero nell'acqua, si aggiunge la farina e si lascia raddoppiare in un luogo tiepido (circa 1 ora). 
+Al lievitino si aggiungono poi gli ingredienti del primo impasto (farina, zucchero, uovo e burro); si lavora finché non è elastico e si lascia lievitare nuovamente fino al raddoppio (circa 2 ore). 
+Si procede quindi con il secondo impasto, unendo al panetto precedente la restante farina, lo zucchero, il miele, gli aromi e le uova. 
+Questa fase è cruciale: bisogna impastare a lungo finché la massa non si stacca dalle pareti della ciotola. Dopo un'ulteriore lievitazione fino al raddoppio, si mette l'impasto in frigorifero per 8-12 ore; il freddo stabilizza i grassi e facilita la fase successiva. 
+Il passaggio più tecnico è la sfogliatura: si stende l'impasto freddo a forma di quadrato e si mette al centro il burro (140 g), ripiegando i lembi della pasta per chiuderlo all'interno. 
+Si stende delicatamente con il mattarello, si piega la pasta su se stessa in tre parti (come una lettera) e si ripone in frigo per 30 minuti. Questa operazione di pieghe e riposo va ripetuta 3 volte. 
+Infine, si modella l'impasto a forma di palla e lo si inserisce nello stampo tipico da Pandoro imburrato. Si lascia lievitare finché la cupola non raggiunge il bordo dello stampo. 
+Si cuoce in forno statico a 170°C per circa 45-50 minuti. Una volta freddo, si cosparge con abbondante zucchero a velo vanigliato. </value>
+  </data>
+  <data name="lblIngredienti.Text" xml:space="preserve">
+    <value>INGREDIENTI (7-8 persone):
+
+
+Per il lievitino:
+Farina 0: 50 g
+Lievito di birra fresco: 15 g
+Acqua tiepida: 30 ml
+Zucchero: 1 cucchiaio 
+
+Per il primo impasto:
+Farina Manitoba: 200 g
+Zucchero: 50 g
+Burro morbido: 30 g
+Uova: 1 intero 
+
+Per il secondo impasto:
+Farina Manitoba: 200 g
+Zucchero: 100 g
+Uova: 2 intere
+Miele: 1 cucchiaio
+Vaniglia: 1 bacca o estratto
+Sale: un pizzico 
+
+Per la sfogliatura:
+Burro morbido: 140 g</value>
   </data>
 </root>

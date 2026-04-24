@@ -31,6 +31,7 @@
             button1 = new Button();
             listBox1 = new ListBox();
             label1 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -49,10 +50,10 @@
             listBox1.Font = new Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "\t", "", "\t\tTiramisù", "\t\tBrioche", "\t\tFrittella", "\t\tCheesecake", "\t\tPlumcake", "\t\tCrostata", "\t\tBiscotti", "\t\tPandoro", "\t\tGelato", "\t\tCiccioCake" });
-            listBox1.Location = new Point(266, 146);
+            listBox1.Items.AddRange(new object[] { "", "\t\tTiramisù", "\t\tBrioche", "\t\tFrittella", "\t\tCheesecake", "\t\tPlumcake", "\t\tCrostata", "\t\tBiscotti", "\t\tPandoro", "\t\tGelato", "\t\tCiccioCake" });
+            listBox1.Location = new Point(266, 158);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(283, 197);
+            listBox1.Size = new Size(283, 182);
             listBox1.TabIndex = 1;
             listBox1.UseWaitCursor = true;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
@@ -68,11 +69,22 @@
             label1.Text = "MENU";
             label1.Click += label1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(555, 390);
+            button2.Name = "button2";
+            button2.Size = new Size(107, 48);
+            button2.TabIndex = 3;
+            button2.Text = "Dispensa di Renata";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(listBox1);
             Controls.Add(button1);
@@ -86,5 +98,6 @@
         private Button button1;
         private ListBox listBox1;
         private Label label1;
+        private Button button2;
     }
 }

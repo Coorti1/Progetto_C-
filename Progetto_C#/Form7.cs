@@ -21,5 +21,10 @@ namespace Progetto_C_
         {
 
         }
+
+        private void lblIngredienti_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

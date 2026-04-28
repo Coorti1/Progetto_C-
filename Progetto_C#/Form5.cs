@@ -21,5 +21,10 @@ namespace Progetto_C_
         {
 
         }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             lblProcedimento = new Label();
-            lblIngredienti = new Label();
             lblNome = new Label();
+            listBox1 = new ListBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblProcedimento
@@ -44,17 +45,6 @@
             lblProcedimento.TabIndex = 10;
             lblProcedimento.Text = resources.GetString("lblProcedimento.Text");
             // 
-            // lblIngredienti
-            // 
-            lblIngredienti.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIngredienti.Location = new Point(3, 172);
-            lblIngredienti.Name = "lblIngredienti";
-            lblIngredienti.RightToLeft = RightToLeft.No;
-            lblIngredienti.Size = new Size(237, 371);
-            lblIngredienti.TabIndex = 9;
-            lblIngredienti.Text = resources.GetString("lblIngredienti.Text");
-            lblIngredienti.Click += lblIngredienti_Click;
-            // 
             // lblNome
             // 
             lblNome.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -65,23 +55,46 @@
             lblNome.TabIndex = 8;
             lblNome.Text = "RICETTA FRITTELLA";
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Items.AddRange(new object[] { "", "Farina 00", "Zucchero semolato", "Uova", "Latte intero", "Lievito per dolci", "Scorza di limone", "Sale", "Olio per friggere", "Zucchero a velo" });
+            listBox1.Location = new Point(12, 208);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(153, 154);
+            listBox1.TabIndex = 23;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 172);
+            label1.Name = "label1";
+            label1.RightToLeft = RightToLeft.No;
+            label1.Size = new Size(229, 208);
+            label1.TabIndex = 22;
+            label1.Text = "INGREDIENTI:";
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1447, 552);
+            Controls.Add(listBox1);
+            Controls.Add(label1);
             Controls.Add(lblProcedimento);
-            Controls.Add(lblIngredienti);
             Controls.Add(lblNome);
             Name = "Form4";
             Text = "Form4";
+            Load += Form4_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label lblProcedimento;
-        private Label lblIngredienti;
         private Label lblNome;
+        private ListBox listBox1;
+        private Label label1;
     }
 }

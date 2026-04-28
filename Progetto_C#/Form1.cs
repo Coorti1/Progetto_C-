@@ -70,14 +70,9 @@ namespace Progetto_C_
             fd.listBox1.Items.Add("Ricotta");
             fd.listBox1.Items.Add("Mascarpone");
             fd.listBox1.Items.Add("Biscotti secchi");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
-            fd.listBox1.Items.Add("Ricotta");
+            fd.listBox1.Items.Add("Cacao Amaro in Polvere");
+            fd.listBox1.Items.Add("Cioccolato al Latte");
+            fd.listBox1.Items.Add("Miele");
 
 
             fd.Show();

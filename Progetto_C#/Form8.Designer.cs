@@ -32,6 +32,7 @@
             lblProcedimento = new Label();
             lblIngredienti = new Label();
             lblNome = new Label();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // lblProcedimento
@@ -52,7 +53,7 @@
             lblIngredienti.RightToLeft = RightToLeft.No;
             lblIngredienti.Size = new Size(229, 208);
             lblIngredienti.TabIndex = 9;
-            lblIngredienti.Text = "INGREDIENTI (7-8 persone):\r\n\r\n\r\nFarina 00: 300 g\r\nBurro freddo: 150 g\r\nZucchero a velo: 100 g\r\nTuorli d'uovo: 2\r\nEstratto di vaniglia o scorza di limone\r\nSale: 1 pizzico ";
+            lblIngredienti.Text = "INGREDIENTI:";
             lblIngredienti.Click += lblIngredienti_Click;
             // 
             // lblNome
@@ -65,11 +66,23 @@
             lblNome.TabIndex = 8;
             lblNome.Text = "RICETTA BISCOTTI";
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Items.AddRange(new object[] { "Farina 00", "Burro freddo", "Zucchero a velo", "Tuorli d'uovo", "Estratto di vaniglia", "Scorza di limone", "Sale" });
+            listBox1.Location = new Point(8, 208);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(118, 124);
+            listBox1.TabIndex = 11;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
             // Form8
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1457, 496);
+            Controls.Add(listBox1);
             Controls.Add(lblProcedimento);
             Controls.Add(lblIngredienti);
             Controls.Add(lblNome);
@@ -83,5 +96,6 @@
         private Label lblProcedimento;
         private Label lblIngredienti;
         private Label lblNome;
+        private ListBox listBox1;
     }
 }

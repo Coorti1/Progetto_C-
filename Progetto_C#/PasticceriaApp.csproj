@@ -9,4 +9,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\cortinovis.23096\source\repos\Progetto_C-\Progetto_C-\Form1.cs" Link="Form1.cs" />
+  </ItemGroup>
+
 </Project>

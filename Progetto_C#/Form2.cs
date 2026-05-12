@@ -12,6 +12,12 @@ namespace Progetto_C_
 {
     public partial class Form2 : Form
     {
+        // Questo metodo è pubblico e permette a chiunque di aggiungere ordini
+        public void AggiungiOrdine(string testo)
+        {
+            listBox1.Items.Add(testo);
+        }
+
         public Form2()
         {
             InitializeComponent();
@@ -48,6 +54,11 @@ namespace Progetto_C_
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }

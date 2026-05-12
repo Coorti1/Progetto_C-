@@ -40,8 +40,9 @@
             button1.Name = "button1";
             button1.Size = new Size(107, 48);
             button1.TabIndex = 0;
-            button1.Text = "Lista della Spesa";
+            button1.Text = "Ordini";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // listBox1
             // 
@@ -55,6 +56,7 @@
             listBox1.Size = new Size(283, 182);
             listBox1.TabIndex = 1;
             listBox1.UseWaitCursor = true;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -74,6 +76,7 @@
             button2.TabIndex = 3;
             button2.Text = "Dispensa di Renata";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 

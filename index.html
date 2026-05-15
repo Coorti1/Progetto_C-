@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciccio & Renata | Boutique della Pasticceria</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d1e17;    
+            --accent: #c5a059;     
+            --soft-pink: #fff5f6;  
+            --deep-pink: #d88a96;  
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background-color: var(--white);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER SPLIT-SCREEN --- */
+        .hero-split {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            background-color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-text-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 10% 0 12%;
+            background: #fff;
+            position: relative;
+        }
+
+        .brand-badge {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .hero-text-side h1 {
+            font-family: 'Cookie', cursive;
+            font-size: clamp(4rem, 10vw, 7.5rem);
+            color: var(--primary);
+            margin: 0;
+            line-height: 0.8;
+        }
+
+        .brand-line {
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            margin: 30px 0;
+        }
+
+        .hero-sub-alt {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--primary);
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .hero-intro {
+            font-size: 0.95rem;
+            color: #777;
+            max-width: 420px;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        .btn-explore {
+            padding: 18px 40px;
+            border: 1px solid var(--primary);
+            text-decoration: none;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            transition: all 0.4s ease;
+        }
+
+        .btn-explore:hover {
+            background: var(--primary);
+            color: var(--white);
+            padding-left: 50px;
+        }
+
+        .hero-visual-side {
+            background: url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .visual-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, #fff, transparent);
+        }
+
+        /* --- MENU SECTION --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        /* --- PRODUCT CARDS --- */
+        .product-card {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid #eee;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: var(--deep-pink);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .product-card.special { background: var(--soft-pink); border: none; }
+
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
+        }
+
+        .product-price {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .add-to-cart {
+            background: none;
+            border: 1px solid var(--primary);
+            padding: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            transition: 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* --- CART OVERLAY --- */
+        .cart-overlay {
+            position: fixed;
+            top: 0; right: -450px;
+            width: 450px; height: 100%;
+            background: white;
+            box-shadow: -10px 0 50px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+        }
+
+        .cart-overlay.open { right: 0; }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .cart-items-container {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-top: 30px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .qty-btn {
+            background: #f0f0f0; border: none;
+            width: 25px; height: 25px; border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .cart-footer {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .checkout-btn {
+            background: var(--accent);
+            color: white; border: none;
+            width: 100%; padding: 20px;
+            text-transform: uppercase; letter-spacing: 3px;
+            cursor: pointer; transition: 0.3s;
+        }
+
+        .checkout-btn:hover { background: var(--primary); }
+
+        .cart-trigger {
+            position: fixed;
+            bottom: 40px; right: 40px;
+            background: var(--primary);
+            color: white;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer; z-index: 900;
+        }
+
+        .cart-count {
+            position: absolute; top: 0; right: 0;
+            background: var(--accent);
+            width: 20px; height: 20px;
+            border-radius: 50%; font-size: 10px;
+            display: flex; justify-content: center; align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-split { grid-template-columns: 1fr; }
+            .hero-visual-side { display: none; }
+            .cart-overlay { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-split">
+        <div class="hero-text-side">
+            <div class="brand-badge">Dal 2024</div>
+            <h1>Ciccio & Renata</h1>
+            <div class="brand-line"></div>
+            <div class="hero-sub-alt">Pasticceria d'Autore</div>
+            <p class="hero-intro">
+                L'arte della tradizione incontra l'eleganza contemporanea. 
+                Ogni creazione è un racconto di sapori autentici.
+            </p>
+            <a href="#menu-start" class="btn-explore">Esplora la Collezione</a>
+        </div>
+        <div class="hero-visual-side"><div class="visual-overlay"></div></div>
+    </header>
+
+    <div id="menu-start"></div>
+
+    <section class="container">
+        <div class="section-title">
+            <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 0.7rem; color: var(--accent);">Menu</p>
+            <h2>Le nostre Specialità</h2>
+        </div>
+        <div class="menu-grid" id="product-list"></div>
+    </section>
+
+    <div class="cart-trigger" onclick="toggleCart()">
+        <span>🛒</span>
+        <div class="cart-count" id="cart-count">0</div>
+    </div>
+
+    <div class="cart-overlay" id="cart-sidebar">
+        <div class="cart-header">
+            <h2 style="font-family: 'Playfair Display'; margin:0;">Carrello</h2>
+            <span style="cursor:pointer; font-size: 2rem;" onclick="toggleCart()">×</span>
+        </div>
+        <div class="cart-items-container" id="cart-items"></div>
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; font-size:1.2rem; font-weight:bold; margin-bottom:20px;">
+                <span>Totale</span>
+                <span id="grand-total">€ 0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="completato()">Invia Ordine all'App</button>
+        </div>
+    </div>
+
+    <script>
+        const inventory = [
+            { id: 1, name: "Tiramisù", price: 4.50 },
+            { id: 2, name: "Brioche", price: 1.50 },
+            { id: 3, name: "Frittella", price: 2.00 },
+            { id: 4, name: "Cheesecake", price: 5.00 },
+            { id: 5, name: "Plumcake", price: 3.50 },
+            { id: 6, name: "Crostata", price: 4.00 },
+            { id: 7, name: "Biscotti", price: 1.80 },
+            { id: 8, name: "Pandoro", price: 25.00 },
+            { id: 9, name: "Gelato", price: 3.00 },
+            { id: 10, name: "CiccioCake 🌟", price: 8.50, special: true }
+        ];
+
+        let cart = [];
+
+        function initProducts() {
+            const list = document.getElementById('product-list');
+            list.innerHTML = inventory.map(p => `
+                <div class="product-card ${p.special ? 'special' : ''}">
+                    <div>
+                        <h3 class="product-name">${p.name}</h3>
+                        <div class="product-price">€ ${p.price.toFixed(2)}</div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(${p.id})">Aggiungi</button>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(id) {
+            const product = inventory.find(p => p.id === id);
+            const exists = cart.find(item => item.id === id);
+            if (exists) { exists.qty++; } else { cart.push({ ...product, qty: 1 }); }
+            updateCart();
+            if(!document.getElementById('cart-sidebar').classList.contains('open')) toggleCart();
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            item.qty += delta;
+            if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+            updateCart();
+        }
+
+        function updateCart() {
+            const container = document.getElementById('cart-items');
+            container.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div>
+                        <h4 style="margin:0;">${item.name}</h4>
+                        <div style="display:flex; gap:10px; align-items:center; margin-top:5px;">
+                            <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
+                            <span>${item.qty}</span>
+                            <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+                        </div>
+                    </div>
+                    <div style="font-weight:bold;">€ ${(item.price * item.qty).toFixed(2)}</div>
+                </div>
+            `).join('');
+            const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            document.getElementById('grand-total').innerText = `€ ${total.toFixed(2)}`;
+            document.getElementById('cart-count').innerText = cart.reduce((sum, i) => sum + i.qty, 0);
+        }
+
+        function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('open'); }
+
+        function completato() {
+            if(cart.length === 0) return;
+            
+            // Crea la stringa formattata per l'App C#
+            const nomi = cart.map(i => `${i.qty}x ${i.name}`).join(', ');
+            const total = document.getElementById('grand-total').innerText;
+            const msg = `ORDINE_SITO: ${nomi} | TOTALE: ${total}`;
+            
+            // Copia negli appunti (Clipboard)
+            navigator.clipboard.writeText(msg).then(() => {
+                alert("Ordine inviato con successo! Torna sull'App di Ciccio.");
+                cart = []; 
+                updateCart(); 
+                toggleCart();
+            }).catch(err => {
+                alert("Errore nell'invio degli appunti. Riprova.");
+            });
+        }
+
+        initProducts();
+    </script>
+</body>
+</html>

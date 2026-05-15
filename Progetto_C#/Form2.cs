@@ -12,7 +12,6 @@ namespace Progetto_C_
 {
     public partial class Form2 : Form
     {
-        // Questo metodo è pubblico e permette a chiunque di aggiungere ordini
         public void AggiungiOrdine(string testo)
         {
             listBox1.Items.Add(testo);
